@@ -1,0 +1,12 @@
+package ru.shpet.accounting_of_books.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import ru.shpet.accounting_of_books.models.Book;
+
+import java.util.List;
+
+@Repository
+public interface BookRepository extends JpaRepository<Book, Integer> {
+    List<Book> findByTitleStartingWith(String title);
+}

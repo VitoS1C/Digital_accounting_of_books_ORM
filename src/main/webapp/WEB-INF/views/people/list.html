@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список людей</title>
+</head>
+<body>
+<div th:each="person : ${people}">
+    <a th:href="@{/people/{id}/(id=${person.getId()})}"
+       th:text="${person.getFullName()}"></a>
+</div>
+<hr>
+<form method="get" th:action="@{/people/add_person}">
+    <input type="submit" value="Добавить человека">
+</form>
+<form method="get" th:action="@{/books}">
+    <input type="submit" value="К списку книг">
+</form>
+</body>
+</html>
