@@ -12,7 +12,6 @@
   <br>
   <label for="birth_year">Год рождения:</label>
   <input type="text" id="birth_year" placeholder="Введите Год рождения" th:field="*{yearOfBirth}" value=""/>
-  <div style="color: red" th:if="${#fields.hasErrors('birth_year')}" th:errors="*{yearOfBirth}"></div>
   <br>
   <br>
   <input type="submit" value="Сохранить"/>

@@ -42,7 +42,7 @@ public class PersonController {
         return "people/new";
     }
 
-    @PostMapping()
+    @PostMapping("/save")
     public String create(@ModelAttribute @Valid Person person,
                          BindingResult bindingResult) {
         personValidator.validate(person, bindingResult);
